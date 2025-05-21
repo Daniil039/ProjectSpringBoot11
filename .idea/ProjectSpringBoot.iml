@@ -6,6 +6,7 @@
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
           <factory-entry name="ProjectSpringBoot" value="56088c05-8a57-413e-a621-5bba8a537a02" />
+          <factory-entry name="entityManagerFactory" value="56088c05-8a57-413e-a621-5bba8a537a02" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>

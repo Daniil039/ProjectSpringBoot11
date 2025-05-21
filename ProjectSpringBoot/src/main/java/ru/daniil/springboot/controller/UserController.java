@@ -70,8 +70,8 @@ public class UserController {
 
     // Удаление пользователя
     @PostMapping("/user/{id}/delete")
-    public String delete(@PathVariable("id") int id) {
-        userService.delete(id);
+    public String delete(@PathVariable("id") long id) {
+        userService.deleteById(id);
         return "redirect:/users";
     }
 }
