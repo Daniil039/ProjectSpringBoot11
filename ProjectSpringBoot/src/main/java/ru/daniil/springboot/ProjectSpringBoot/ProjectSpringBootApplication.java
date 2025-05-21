@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 
 @SpringBootApplication
-@EnableJpaRepositories("ru.daniil.springboot.dao")
+@EnableJpaRepositories("ru.daniil.springboot.repository")
 @EntityScan("ru.daniil.springboot.model")
 @ComponentScan("ru.daniil.springboot")
 public class ProjectSpringBootApplication {

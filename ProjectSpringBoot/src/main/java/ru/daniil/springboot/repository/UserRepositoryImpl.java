@@ -1,19 +1,18 @@
-package ru.daniil.springboot.service;
+package ru.daniil.springboot.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import ru.daniil.springboot.repository.UserRepository;
+import org.springframework.stereotype.Repository;
 import ru.daniil.springboot.model.User;
 
 import java.util.List;
 
-@Service
-public class UserServiceImpl implements UserService {
+@Repository
+public class UserRepositoryImpl implements UserRepository {
 
     private final UserRepository userRepository;
 
     @Autowired
-    public UserServiceImpl(UserRepository userRepository) {
+    public UserRepositoryImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
@@ -38,7 +37,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void update(int id, User user) {
-        userRepository.update(user);
+    public void update(User user) {
+        userRepository.save(user);
     }
 }
